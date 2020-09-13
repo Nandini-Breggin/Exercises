@@ -3,7 +3,7 @@ public class TrimString
   public static void main ( String[] args )
   {
     
-    String first = new String("    In a Hole    in the ground there lived a Hobbit.   .");
+    String first = new String("    In a Hole           in the ground there lived a Hobbit.   .");
     
     System.out.println(first);
 
