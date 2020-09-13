@@ -12,3 +12,5 @@ public class StringDemo3
 }
 
 // 1. Nothing shows up
+// 2. Doesn't delete any characters.
+// 3.
