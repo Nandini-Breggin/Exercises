@@ -6,6 +6,7 @@ public class StringDemo2
     int len;
 
     str = new String( "     Elementary, my dear Watson!                    !");
+    
     // Spaces count as characters
     // Tabs are one character
 
