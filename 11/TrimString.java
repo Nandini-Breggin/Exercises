@@ -12,6 +12,7 @@ public class TrimString
     second = first.trim();
 
     System.out.println(second);
+    
 
     // .trim() only takes out the first set of spaces before the first letter in the "",
     // internal spaces within "" remain.
