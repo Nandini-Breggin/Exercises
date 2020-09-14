@@ -3,18 +3,14 @@ public class RunTime {
 
     public static void main(String[] args) {
 
-        String str ;
+        String first = new String("       Hello, World!         r");
 
-        str = new String("Hello, World!");
+        String second;
+        
+        second = first.trim();
 
-        System.out.println(str);
-
-        String secondVariable;
-
-        System.out.println(secondVariable);
-
-        // error: variable secondVariable might not have been initialized
-        // I created the reference variable, but I didn't create secondVariable as a new String
+        System.out.println(first);
+        System.out.println(second);
 
     }
 }
