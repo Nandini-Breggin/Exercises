@@ -6,7 +6,7 @@ public class Dollar {
         Scanner input = new Scanner(System.in);
         
         System.out.print( "Input the cents: " );
-		int cents = input.nextInt();
+        int cents = input.nextInt();
 
         System.out.println( "That is " + cents / 100 + " dollars and " + cents % 100 + " cents." );
     }
