@@ -8,6 +8,10 @@ public class Dollar {
         System.out.print( "Input the cents: " );
         int cents = input.nextInt();
 
-        System.out.println( "That is " + cents / 100 + " dollars and " + cents % 100 + " cents." );
+        int dollar = cents / 100;
+
+        int change = cents % 100;
+
+        System.out.println( "That is " + dollar + " dollars and " + change + " cents." );
     }
 }
