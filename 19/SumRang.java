@@ -13,6 +13,7 @@ public class SumRang {
 
         
         // sum = (n * (n + 1)) / 2
+        
 
 
 		int sum = ( high * ( high + 1 ) / 2 ) - ( low * ( low + 1 ) / 2 ) + low;
