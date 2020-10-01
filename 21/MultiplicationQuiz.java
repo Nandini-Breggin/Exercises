@@ -18,7 +18,7 @@ public class MultiplicationQuiz {
 			n1 = rand.nextInt(9) + 1;
 			n2 = rand.nextInt(9) + 1;
 		
-			System.out.print("What is " + n1 + " * " + n2 + "? ");
+			System.out.println("What is " + n1 + " * " + n2 + "? ");
 			
 			if ((n1 * n2) == input.nextInt()) {
 				System.out.println("Correct!");
