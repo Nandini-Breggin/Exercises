@@ -17,6 +17,7 @@ public class SnakeEyes {
 
 
         // chooses a random number from the 6 sides on the dice
+        
 		int first_dice = rand.nextInt(6) + 1;
         int second_dice = rand.nextInt(6) + 1;
 
