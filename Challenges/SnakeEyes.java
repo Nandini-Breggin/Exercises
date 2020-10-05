@@ -23,29 +23,39 @@ public class SnakeEyes {
 
         int sum_total = 0; // sum of dice rolls
         
-        int number_rolls = 0; // number of rolls
+        int number_rolls = 0; // number of rolls to start
         
         int total_rolls = 0; // total amount of rolls made
         
-        int roll_four = 0; // average game more than 4 rolls
+        double roll_four = 0; // average game more than 4 rolls
 
 
-		while(i < n) { // Run it n number of times
+		while (i < n) { // Run it n number of times
 
 			number_rolls = 0; // start from scratch
 
 			do {
+
+				
 
 				total_rolls += 1; // add 1 to the total number of rolls made
 				number_rolls += 1;
 				sum_total += (first_dice + second_dice); // add the added numbers to the total sum
 
                 first_dice = rand.nextInt(6) + 1;
-		        second_dice = rand.nextInt(6) + 1;
+				second_dice = rand.nextInt(6) + 1;
+				
+				// System.out.println(first_dice);
+				// System.out.println(second_dice);
+				
+				
 
 
-            } while (first_dice != 1 && second_dice != 1);
-            // while the numbers aren't equal to 1 for both: Snake Eyes
+            } while (!(first_dice == 1 && second_dice == 1));
+			// while the numbers aren't equal to 1 for both: Snake Eyes
+			
+			// while (first_dice != 1 && second_dice != 1);
+			// above statement doesn't work because distibutive property doesn't work!!!
 
 			if (number_rolls > 4) {
                 // needed more than 4 rolls
