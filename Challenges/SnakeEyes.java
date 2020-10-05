@@ -18,16 +18,16 @@ public class SnakeEyes {
 
         // chooses a random number from the 6 sides on the dice
         
-		int first_dice = rand.nextInt(6) + 1;
-        int second_dice = rand.nextInt(6) + 1;
+		int first_dice = rand.nextInt(6) + 1; // first die
+        int second_dice = rand.nextInt(6) + 1; // second die
 
-        int sum_total = 0;
+        int sum_total = 0; // sum of dice rolls
         
-        int number_rolls = 0;
+        int number_rolls = 0; // number of rolls
         
-        int total_rolls = 0;
+        int total_rolls = 0; // total amount of rolls made
         
-        int roll_four = 0; 
+        int roll_four = 0; // average game more than 4 rolls
 
 
 		while(i < n) { // Run it n number of times
