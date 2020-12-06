@@ -5,19 +5,21 @@ public class Combinations{
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter n: ");
+        System.out.println("Enter N: ");
         int n = scan.nextInt();
 
-        if (n > 20) {
-            System.out.println("Please enter a number, n, under 20.");
+        if (n > 20 || n < 0) {
+            System.out.println("Error Flag: -1");
+            System.out.println("N must be 20 or under.");
             System.exit(1);
         }
 
-        System.out.println("Enter r: ");
+        System.out.println("Enter R: ");
         int r = scan.nextInt();
 
-        if (r > n) {
-            System.out.println("Please enter a number, r, under " + n);
+        if (r > n || r < 0) {
+            System.out.println("Error Flag: -1");
+            System.out.println("R must less than or equal to N");
             System.exit(1);
         }
 
