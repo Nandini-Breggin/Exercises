@@ -27,10 +27,10 @@ public class NumberFilter {
             outPositive = new PrintWriter(new BufferedWriter(new FileWriter(positiveFile)));
             
 
-			while(in.hasNextInt()) {
+			while (in.hasNextInt()) {
                 int num = in.nextInt();
                 
-				if(num < 0) {
+				if (num < 0) {
 					outNegative.write("" + num + "\n");
 				} else {
 					outPositive.write("" + num + "\n");
@@ -39,7 +39,8 @@ public class NumberFilter {
 
 			outPositive.close();
 			outNegative.close();
-		} catch( Exception e ) {
+			
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
