@@ -14,7 +14,7 @@ public class ToDoApp {
 
         try {
 
-            output = new PrintWriter(new FileWriter("Task.txt", true));
+            output = new PrintWriter(new FileWriter("Tasks.txt", true));
             file = new File("Tasks.txt");
             scan = new Scanner(file);
             userScan = new Scanner(System.in);
@@ -44,7 +44,7 @@ public class ToDoApp {
                     }
 
                     if (option == 'c') {
-                        PrintWriter writer = new PrintWriter("Task.txt");
+                        PrintWriter writer = new PrintWriter("Tasks.txt");
                         writer.print("");
                         writer.close();
                     }
@@ -107,8 +107,8 @@ public class ToDoApp {
             userScan.close();
             output.close();
 
-        } catch (FileNotFoundException e) {
-            System.out.println("File does not exist");
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("File is cleared.");
             System.exit(0);
         }
     }

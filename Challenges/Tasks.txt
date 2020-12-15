@@ -1,1 +1,10 @@
-[Task Description: Testing the code	Due date: Monday	Done? true	Priority: 3]
+[Task Description: Add code to github
+Due Date: Whenever
+Done? false
+Priority: 3]
+
+[Task Description: Hi
+Due Date: None
+Done? true
+Priority: 1]
+
