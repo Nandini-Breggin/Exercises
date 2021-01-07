@@ -17,4 +17,5 @@ sort (int[] data) {
 }
 ```
 
-BONUS: Which class of algorithm does your solution fit into? Is there a faster way to solve the problem?
+### BONUS:
+Which class of algorithm does your solution fit into? Is there a faster way to solve the problem?
