@@ -18,8 +18,14 @@ public class ArrayAlg {
         search(test, 5); // -1
         search(test, 333); // -1
 
+        System.out.println("\n---------------");
+        System.out.println("\nSort:");
+
+        int[] sorter = { 4, 5, 333, 4345242, 534534523, 542432432, 6 };
         
-        System.out.println("\n");
+        System.out.println("\nOriginal Data: " + Arrays.toString(sorter));
+        sort(sorter);
+
     }
 
     // Returns index of needle found in the haystack
@@ -28,27 +34,45 @@ public class ArrayAlg {
 
 
 		for (int i = 0; i < haystack.length; i++) {
-            // System.out.println("Test");
 
 			if (needle == haystack[i]) {
-                // i++;
-                // System.out.println(i);
-                // System.out.println("Check");
-                // System.out.println(haystack[i]);
+                
                 System.out.println(needle + " index: " + i);
                 return i;
                 
             }
-            // break;
+            
         }
 
-        System.out.println("-1: " + needle + " NOT FOUND");
+        System.out.println("-1: " + needle + " NOT FOUND!");
 		return -1;
     
     }
 
-    // public static int sort(int[] data, int first, int middle, int last) {
-        // works with array at length 3 -> start with that, and then can expand
+    // Use swaps to rearrange the data to be in ascending order
+    // BONUS: Linear. There isn't a faster way to solve the problem.
+    public static int[] sort(int[] data) {
 
-    // }
+		int x; // temporary holding value, to store the values while being swaped
+
+		for (int i = 0; i < data.length; i++) {
+
+			for (int j = i + 1; j < data.length; j++) {
+				
+				if (data[i] > data[j] ) {
+
+					x = data[i];
+					data[i] = data[j];
+					data[j] = x;
+				}
+
+			}
+
+        }
+
+        System.out.println("\nSorted Data: " + Arrays.toString(data));
+		return data;
+
+	}
+
 }
