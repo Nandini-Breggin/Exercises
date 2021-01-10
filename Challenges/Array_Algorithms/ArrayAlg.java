@@ -1,13 +1,16 @@
-// import java.util.Arrays;
-// import java.util.*;
+import java.util.Arrays;
+import java.util.*;
 
 public class ArrayAlg {
     public static void main(String[] args) {
 
-        int[] ogData = { 1, 4, 2, 5, 3, 5, 1010, 234, 23445, 32948 };
+        // int[] haystack = { 1, 4, 2, 5, 3, 5, 333 };
+        int[] haystack = {};
 
-        System.out.println("\nSearching haystack:");
-        search(ogData, 0); // 9
+        System.out.println("\nSearching haystack:\n");
+        search(haystack, 15); // -1
+        search(haystack, 5); // 3
+        search(haystack, 333); // 6
         
         System.out.println("\n");
     }
@@ -16,21 +19,29 @@ public class ArrayAlg {
     // Constant or Linear?
     public static int search( int[] haystack, int needle ) {
 
-		for (int i = 0; i < haystack.length; i++) {
 
-			if (haystack[i] == needle) {
+		for (int i = 0; i < haystack.length; i++) {
+            // System.out.println("Test");
+
+			if (needle == haystack[i]) {
+                // i++;
                 // System.out.println(i);
-                System.out.println("Test");
-                System.out.println(haystack[i]);
-				return i;
-			}
+                // System.out.println("Check");
+                // System.out.println(haystack[i]);
+                System.out.println(needle + " index: " + i);
+                return i;
+                
+            }
+            // break;
         }
-        
+
+        System.out.println("-1: " + needle + " NOT FOUND");
 		return -1;
     
     }
 
-    // public static int sort(int[] data) {
+    // public static int sort(int[] data, int first, int middle, int last) {
+        // works with array at length 3 -> start with that, and then can expand
 
     // }
 }
