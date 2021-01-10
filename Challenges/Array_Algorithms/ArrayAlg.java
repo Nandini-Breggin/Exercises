@@ -16,7 +16,7 @@ public class ArrayAlg {
     }
 
     // Returns index of needle found in the haystack
-    // Constant or Linear?
+    // BONUS: Linear. There isn't a faster way to solve the problem.
     public static int search( int[] haystack, int needle ) {
 
 
