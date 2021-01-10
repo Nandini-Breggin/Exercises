@@ -4,13 +4,20 @@ import java.util.*;
 public class ArrayAlg {
     public static void main(String[] args) {
 
-        // int[] haystack = { 1, 4, 2, 5, 3, 5, 333 };
-        int[] haystack = {};
-
+        int[] haystack = { 1, 4, 2, 5, 3, 5, 333 };
+        
         System.out.println("\nSearching haystack:\n");
         search(haystack, 15); // -1
         search(haystack, 5); // 3
         search(haystack, 333); // 6
+
+        int [] test = {};
+
+        System.out.println("\nSearching 2nd haystack:\n");
+        search(test, 15); // -1
+        search(test, 5); // -1
+        search(test, 333); // -1
+
         
         System.out.println("\n");
     }
