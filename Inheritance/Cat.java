@@ -1,4 +1,4 @@
-public class Cat extends Animal{
+public class Cat extends Animal {
 
     public Cat (String name, String breed, int age) {
         super(name, breed, age); // calling the animal constructor
@@ -6,6 +6,15 @@ public class Cat extends Animal{
 
     public boolean isHappy() {
         return hasSlept() && hasEaten() && hasPlayed();
+    }
+
+    public String speak() {
+        return "meow!";
+    }
+
+    // -1 0 1
+    public int compareTo (Animal animal) {
+        // 
     }
 
     // ALL OF THIS IS IN THE Animal.java -> Inheritance that is the same for the dog and cat

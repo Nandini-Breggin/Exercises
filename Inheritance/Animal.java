@@ -1,6 +1,7 @@
 // package Exercises.Inheritance;
 
-public class Animal {
+public abstract class Animal implements Comparable<Animal> {
+    // cannot do new Animal with an abstract class
 
 	private String name, breed;
 	private int age;
@@ -60,6 +61,13 @@ public class Animal {
 
     public String toString() {
         return this.name + ", " + this.breed + ", " + this.age;
+    }
+
+    public abstract String speak(); // declared but not implemented
+
+    // -1 0 1
+    public int compareTo (Animal animal) {
+        // 
     }
 
 }

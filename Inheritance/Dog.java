@@ -61,6 +61,14 @@ public class Dog extends Animal {
     //     return this.hasPlayed;
     // }
 
+    public void fetch() {
+        
+    }
+
+    public String speak() {
+        return "woof!";
+    }
+
     
 
 }
