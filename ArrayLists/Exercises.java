@@ -8,7 +8,8 @@ public class Exercises {
         ArrayList<String> fruits2 = new ArrayList<>(Arrays.asList("bapples","mangos","melon","orange","lime","banana","cherry","lychee","kiwi","kumquat"));
         ArrayList<String> animals = new ArrayList<>(Arrays.asList("puppy", "ardvark", "ant", "elephant", "lion", "lion", "tiger", "cheetah", "puppy", "ants"));
 
-        ArrayList<Integer> num = new ArrayList<>(Arrays.asList(3, 6, 9, 12, 15));
+        ArrayList<Integer> number = new ArrayList<>(Arrays.asList(3, 6, 9, 12, 15));
+        ArrayList<Points> points = pairs2(number);
 
         // 0. Given two lists of 10 items each: one of fruits, one of vegetables, combine the two lists into a third master list. Sort it.
         System.out.println("\nFruits: " + fruits);
@@ -27,11 +28,26 @@ public class Exercises {
         System.out.println("\nNon-Duplicated Animals: ");
         System.out.println(duplicatedAnimals(animals));
         System.out.println("\n");
-        // Given a sorted list of integers, and a new number to add to the list, write an efficient algorithm to insert the new number in a place that keeps the list sorted.
-        System.out.println("\nOriginal List: " + num);
+        // 3. Given a sorted list of integers, and a new number to add to the list, write an efficient algorithm to insert the new number in a place that keeps the list sorted.
+        System.out.println("\nOriginal List: " + number);
         System.out.println("\nSorted List: ");
-        System.out.println(addNumber(num, 5)); // 3, 5, 6, 9, 12, 15
+        System.out.println(addNumber(number, 5)); // 3, 5, 6, 9, 12, 15
         System.out.println("\n");
+        // 4. Given a list of integers, reverse the list. Do not create a second list to solve this problem.
+        System.out.println("\nOriginal List: " + number);
+        System.out.println("\nSorted List: ");
+        System.out.println(reverseOrder(number)); // 15, 12, 9, 6, 3
+        System.out.println("\n");
+        // 5. Design a new class that represents a point in 2d space.
+        System.out.println("\n2d space point: ");
+        System.out.println(pairs1(number));
+        System.out.println(pairs2(number));
+        // 6. Given a list of points, in between each pair of points insert the midpoint of those two points
+        System.out.println("\nMidpoints: ");
+        System.out.println(midPoint(points));
+        // 7. Given a list of points, sort them by proximity to the origin
+        System.out.println("\nOrigin Proximity: ");
+        System.out.println(orderPoints(points));
 
     }
 
@@ -85,5 +101,58 @@ public class Exercises {
         return newList;
     }
 
+    public static ArrayList<Integer> reverseOrder(ArrayList<Integer> nums) {
+        for (int i = 0; i < nums.size()/2; i++) {
+            int temp = nums.get(i);
+            nums.set(i, nums.get(nums.size()-(i+1)));
+            nums.set(nums.size()-(i+1), temp);
+        }
+        return nums;
+    }
+
+    public static List<List<Integer>> pairs1(ArrayList<Integer> nums) {
+        List<List<Integer>> pairs = new ArrayList<List<Integer>>();
+        for(int i = 0; i < nums.size()-1; i++){
+            List<Integer> temp = new ArrayList<>(Arrays.asList(nums.get(i), nums.get(i+1)));
+            pairs.add(temp);
+            i++;
+        }
+        return pairs;
+    }
+
+    public static ArrayList<Points> pairs2(ArrayList<Integer> nums) {
+        ArrayList<Points> pairs = new ArrayList<Points>();
+        for(int i = 0; i < nums.size()-1; i++){
+            pairs.add(new Points(nums.get(i), nums.get(i+1)));
+            i++;
+        }
+        return pairs;
+    }
+
+    public static ArrayList<Points> midPoint(ArrayList<Points> nums) {
+        ArrayList<Points> pairs = new ArrayList<Points>();
+        for(int i = 0; i < nums.size()-1; i++){
+            pairs.add((nums.get(i)));
+            // if(i < nums.size()) {
+                pairs.add(nums.get(i).MidPoint(nums.get(i+1)));
+            // }
+        }
+        pairs.add(nums.get(nums.size()-1));
+        return pairs;
+    }
+
+
+    public static ArrayList<Points> orderPoints(ArrayList<Points> points) {
+        for(int i = 0; i < points.size(); i++){
+            int minI = i;
+            for(int p = i+1; p < points.size(); p++){
+                if(points.get(p).OriginDistance() < points.get(minI).OriginDistance()) minI = p;
+            }
+            Points bruh = points.get(minI);
+            points.set(minI, points.get(i));
+            points.set(i, bruh);
+        }
+        return points;
+    }
 
 }
